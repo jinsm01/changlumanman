@@ -13,7 +13,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class TestWait:
     def setup(self):
-        self.driver = webdriver.Chrome()
+        # self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
         self.driver.maximize_window()
         self.driver.get('https://home.testing-studio.com/latest')
         self.driver.implicitly_wait(3)
