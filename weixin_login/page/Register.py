@@ -14,6 +14,7 @@ class Register:
         self.driver = driver
 
     def register(self):
+        sleep(2)
         self.driver.find_element_by_css_selector('#corp_name').send_keys('测试1')
         self.driver.find_element_by_css_selector('#manager_name').send_keys('admin1')
         sleep(5)
