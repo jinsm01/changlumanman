@@ -15,9 +15,9 @@ class AddMembers:
 
     def add_members(self):
         sleep(2)
-        self.driver.find_element(By.ID, 'username').send_keys('se')
-        self.driver.find_element(By.ID, 'memberAdd_acctid').send_keys('aycc')
-        self.driver.find_element(By.ID, 'memberAdd_phone').send_keys('13826222222')
+        self.driver.find_element(By.ID, 'username').send_keys('sre')
+        self.driver.find_element(By.ID, 'memberAdd_acctid').send_keys('ayrcc')
+        self.driver.find_element(By.ID, 'memberAdd_phone').send_keys('13828222222')
         self.driver.find_element(By.CSS_SELECTOR, '.js_btn_save').click()
         sleep(5)
 
