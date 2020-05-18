@@ -15,10 +15,18 @@ class AddMembers:
 
     def add_members(self):
         sleep(2)
-        self.driver.find_element(By.ID, 'username').send_keys('测试1')
-        self.driver.find_element(By.ID, 'memberAdd_acctid').send_keys('1111111')
-        self.driver.find_element(By.ID, 'memberAdd_phone').send_keys('11111111111')
+        self.driver.find_element(By.ID, 'username').send_keys('se')
+        self.driver.find_element(By.ID, 'memberAdd_acctid').send_keys('aycc')
+        self.driver.find_element(By.ID, 'memberAdd_phone').send_keys('13826222222')
         self.driver.find_element(By.CSS_SELECTOR, '.js_btn_save').click()
         sleep(5)
-        return True
 
+    def get_members(self):
+        elements = self.driver.find_elements(By.CSS_SELECTOR, '.member_colRight_memberTable_td:nth-child(2)')
+        return [element.get_attribute('title')for element in elements]
+
+
+    # list = []
+    # for element in elements:
+    #     list.append(element.get_attribute('title'))
+    # return list
