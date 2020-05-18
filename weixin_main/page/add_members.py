@@ -8,21 +8,21 @@ from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
+from weixin_main.page.base_page import BasePage
 
-class AddMembers:
-    def __init__(self, driver: WebDriver):
-        self.driver = driver
+
+class AddMembers(BasePage):
 
     def add_members(self):
         sleep(2)
-        self.driver.find_element(By.ID, 'username').send_keys('sre')
-        self.driver.find_element(By.ID, 'memberAdd_acctid').send_keys('ayrcc')
-        self.driver.find_element(By.ID, 'memberAdd_phone').send_keys('13828222222')
-        self.driver.find_element(By.CSS_SELECTOR, '.js_btn_save').click()
+        self.find(By.ID, 'username').send_keys('sryy78e')
+        self.find(By.ID, 'memberAdd_acctid').send_keys('ayrysycc')
+        self.find(By.ID, 'memberAdd_phone').send_keys('13828328222')
+        self.find(By.CSS_SELECTOR, '.js_btn_save').click()
         sleep(5)
 
     def get_members(self):
-        elements = self.driver.find_elements(By.CSS_SELECTOR, '.member_colRight_memberTable_td:nth-child(2)')
+        elements = self.finds(By.CSS_SELECTOR, '.member_colRight_memberTable_td:nth-child(2)')
         return [element.get_attribute('title')for element in elements]
 
 

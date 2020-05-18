@@ -10,11 +10,12 @@ from weixin_main.page.main_page import MainPage
 
 class TestAddMembers:
     def setup(self):
-        self.main = MainPage()
+        self.mainpage = MainPage()
 
     def test_addmembers(self):
-        add_members = self.main.goto_add_members()
+        add_members = self.mainpage.goto_add_members()
         add_members.add_members()
         add_members.get_members()
         sleep(2)
-        assert 'se' in add_members.get_members()
+        assert 'SE' in add_members.get_members()
+
